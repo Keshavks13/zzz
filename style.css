@@ -1,0 +1,72 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Container for Canvas */
+#canvas-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Logo Styling */
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem; /* Slightly smaller for better scaling on mobile */
+  text-align: center;
+  width: 90%; /* Added width constraint for small screens */
+  box-sizing: border-box;
+}
+
+/* Button Styling */
+.navigate-btn, .clear-btn {
+  display: block; /* Stack buttons vertically */
+  margin: 15px auto 0; /* Auto-align for both buttons */
+  padding: 10px 15px;
+  border: 2px solid white;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+  max-width: 300px; /* Prevent buttons from getting too wide */
+  width: 30%; /* Make buttons responsive */
+}
+
+.navigate-btn:hover, .clear-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* Responsiveness for Smaller Screens */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 2rem; /* Adjust font size */
+  }
+
+  .navigate-btn, .clear-btn {
+    font-size: 1rem; /* Slightly smaller font for buttons */
+    padding: 8px 12px; /* Reduced padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem; /* Further adjustment for very small screens */
+  }
+
+  .navigate-btn, .clear-btn {
+    font-size: 0.9rem; /* Smaller font size for compact view */
+    padding: 7px 10px; /* Reduced padding */
+  }
+}
